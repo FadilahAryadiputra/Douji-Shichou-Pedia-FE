@@ -35,7 +35,7 @@ export function AppBreadcrumb() {
           const isLast = index === segments.length - 1
 
           const label = decodeURIComponent(segment)
-            .replace(/-/g, " ")
+            .replace(/[-_]/g, " ")
             .replace(/\b\w/g, (char) => char.toUpperCase())
 
           return (
